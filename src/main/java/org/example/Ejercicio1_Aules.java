@@ -4,18 +4,26 @@ import java.util.Scanner;
 
 public class Ejercicio1_Aules {
 
-    static void main(){
-        System.out.println("¿Que numero de horas trabajas?");
+    static void main() {
+        System.out.println("Introduce numero de horas");
         Scanner teclado = new Scanner(System.in);
-        float horas = teclado.nextFloat();
+        double horas = teclado.nextFloat();
 
-        System.out.println("¿Que tarifa cobras por hora?");
-        float tarifa = teclado.nextFloat();
+        System.out.println("Precio/hora");
+        double tarifa = teclado.nextFloat();
 
-        System.out.println("salario:" + (horas*tarifa));
-
-
-
+        if (horas <= 40) {
+            double salario = horas * tarifa;
+            System.out.println("Salario" + salario);
+        } else {
+            double extras = horas - 40;
+            double salario = 40 * tarifa;
+            extras = extras * tarifa * 1.5;
+            System.out.println("Salario (con extras)" + (salario + extras));
         }
 
+    }
+
+
 }
+
