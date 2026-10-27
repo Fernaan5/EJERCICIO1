@@ -11,17 +11,14 @@ public class Eercicio_feria {
 
         System.out.println("introduzca su altura en cm");
         int altura = teclado.nextInt();
-        if (altura < 140) {
+        if (altura < 140 && altura >=0) {
             System.out.println("LO SIENTO, NO PUEDES MONTAR EN LA ATRACCIÓN. Te faltan " + (140 - altura) + "cm de altura");
         } else {
 
-            if (altura > 230) {
-                System.out.println("ERROR DE LECTURA. BAJA DE LA BÁSCULA Y VUELVE A SUBIR");
-            } else {
-
-                if (altura < 0 && altura > 230) {
+                if (altura < 0 || altura > 230) {
                     System.out.println("ERROR DE LECTURA. BAJA DE LA BÁSCULA Y VUELVE A SUBIR");
-                }
+                }else{
+
                 teclado.nextLine();
                 System.out.println("introduce tu peso");
                 float peso = teclado.nextFloat();
@@ -36,6 +33,10 @@ public class Eercicio_feria {
                     if (peso > 120) {
                         System.out.println(" Lo siento, te sobran " + (peso - 120) + "kilos para subir");
 
+
+
+                    }else{
+                        System.out.println("Puedes subir");
                     }
 
 
