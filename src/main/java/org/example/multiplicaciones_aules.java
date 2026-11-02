@@ -7,8 +7,15 @@ public class multiplicaciones_aules {
 
     static void main () {
 
-     int numero = 221;
-     String numero_string = Integer.toString(numero);
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("INTRODUCE UN NUMERO");
+        int numero = teclado.nextInt();
+
+        System.out.println("INTRODUCE OTRO NUMERO");
+
+     int numero1 = teclado.nextInt();
+     String numero_string = Integer.toString(numero1);
      System.out.println(numero_string);
 
      String primera_cifra = numero_string.substring(2,3);
@@ -22,6 +29,30 @@ public class multiplicaciones_aules {
      String tercera_cifra = numero_string.substring(0,1);
      int tercera_cifra_numero = Integer.parseInt(tercera_cifra);
      System.out.println(tercera_cifra_numero);
+
+        System.out.println("El producto de la multiplicacion es" + (numero*numero1));
+        System.out.println("El proceso es");
+
+        System.out.println(" "+numero);
+        System.out.println("*"+numero1);
+        System.out.println("-------");
+
+        System.out.println("  "+(primera_cifra_numero*numero));
+        System.out.println(" "+(segunda_cifra_numero*numero)+"X");
+        System.out.println((tercera_cifra_numero*numero)+"XX");
+
+        System.out.println("-------");
+        System.out.println((numero*numero1));
+
+
+
+
+
+
+
+
+
+
 
 
 
